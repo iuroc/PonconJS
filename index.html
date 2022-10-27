@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>路由控制系统</title>
+    <script src="poncon.js"></script>
+    <script>
+        window.onload = function () {
+            var poncon = new Poncon()
+            poncon.setPageList(['home', 'about'])
+            poncon.setPage('home', function (target, dom, args) {
+                console.log(target, dom, args)
+            })
+            poncon.setPage('about', function (target, dom, args) {
+                console.log(target, dom, args)
+            })
+            poncon.start()
+        }
+    </script>
+</head>
+
+<body>
+
+    <div class="page-home page-oyp">
+        主页
+    </div>
+
+    <div class="page-about page-oyp">
+        关于
+    </div>
+
+</body>
+
+</html>
