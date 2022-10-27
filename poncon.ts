@@ -1,6 +1,6 @@
 /**
  * @author 欧阳鹏
- * https://apee/top
+ * https://apee.top
  */
 class Poncon {
     private pages = {}
@@ -13,11 +13,11 @@ class Poncon {
         if (!target) {
             return
         }
-        document.querySelectorAll<HTMLElement>('.page-oyp').forEach((dom: HTMLElement) => {
+        document.querySelectorAll<HTMLElement>('.poncon-page').forEach((dom: HTMLElement) => {
             dom.style.display = 'none'
         })
-        var dom = document.querySelector<HTMLElement>(`.page-${target}`) as HTMLElement
-        dom.style.display = 'block'
+        var dom = document.querySelector<HTMLElement>(`.poncon-${target}`) as HTMLElement
+        dom.style.display = ''
     }
     /**
      * 设置页面名称列表
@@ -25,7 +25,7 @@ class Poncon {
      */
     setPageList(pageNames: string[]): void {
         pageNames.forEach(target => {
-            var dom = document.querySelector(`.page-${target}`)
+            var dom = document.querySelector(`.poncon-${target}`)
             this.pages[target] = {
                 dom: dom,
                 event: (() => { })
@@ -43,7 +43,7 @@ class Poncon {
         if (!target) {
             return
         }
-        var dom = document.querySelector(`.page-${target}`)
+        var dom = document.querySelector(`.poncon-${target}`)
         this.pages[target] = {
             dom: dom,
             event: func || (() => { })
@@ -93,7 +93,7 @@ class Poncon {
         var target: string = strs[1] || ''
         // target不合法或者不在白名单
         if (target.search(/^\w+$/) != 0 || this.pageNames.indexOf(target) == -1) {
-            history.replaceState({}, '', './')
+            history.replaceState({}, '', `${location.pathname}`)
             return 'home'
         }
         return target
@@ -104,6 +104,6 @@ class Poncon {
      * @returns 页面DOM元素
      */
     private getDom(target: string): any {
-        return document.querySelector(`.page-${target}`)
+        return document.querySelector(`.poncon-${target}`)
     }
 }

@@ -1,6 +1,6 @@
 /**
  * @author 欧阳鹏
- * https://apee/top
+ * https://apee.top
  */
 var Poncon = /** @class */ (function () {
     function Poncon() {
@@ -14,11 +14,11 @@ var Poncon = /** @class */ (function () {
         if (!target) {
             return;
         }
-        document.querySelectorAll('.page-oyp').forEach(function (dom) {
+        document.querySelectorAll('.poncon-page').forEach(function (dom) {
             dom.style.display = 'none';
         });
-        var dom = document.querySelector(".page-".concat(target));
-        dom.style.display = 'block';
+        var dom = document.querySelector(".poncon-".concat(target));
+        dom.style.display = '';
     };
     /**
      * 设置页面名称列表
@@ -27,7 +27,7 @@ var Poncon = /** @class */ (function () {
     Poncon.prototype.setPageList = function (pageNames) {
         var _this_1 = this;
         pageNames.forEach(function (target) {
-            var dom = document.querySelector(".page-".concat(target));
+            var dom = document.querySelector(".poncon-".concat(target));
             _this_1.pages[target] = {
                 dom: dom,
                 event: (function () { })
@@ -44,7 +44,7 @@ var Poncon = /** @class */ (function () {
         if (!target) {
             return;
         }
-        var dom = document.querySelector(".page-".concat(target));
+        var dom = document.querySelector(".poncon-".concat(target));
         this.pages[target] = {
             dom: dom,
             event: func || (function () { })
@@ -94,7 +94,7 @@ var Poncon = /** @class */ (function () {
         var target = strs[1] || '';
         // target不合法或者不在白名单
         if (target.search(/^\w+$/) != 0 || this.pageNames.indexOf(target) == -1) {
-            history.replaceState({}, '', './');
+            history.replaceState({}, '', "".concat(location.pathname));
             return 'home';
         }
         return target;
@@ -105,7 +105,7 @@ var Poncon = /** @class */ (function () {
      * @returns 页面DOM元素
      */
     Poncon.prototype.getDom = function (target) {
-        return document.querySelector(".page-".concat(target));
+        return document.querySelector(".poncon-".concat(target));
     };
     return Poncon;
 }());

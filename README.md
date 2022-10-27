@@ -8,6 +8,10 @@
 - 使用 CSS display 控制页面显示
 - 路由格式：`host/[filename]#/target[/args]`
 
+## 使用说明
+
+- 入口页面必须是 `div.poncon-home.poncon-page`
+
 ## 使用方法
 
 - 引入 poncon.js
@@ -45,4 +49,16 @@
 
     ```js
     poncon.start()
+    ```
+
+- HTML页面模板
+  
+    ```html
+    <div class="poncon-home poncon-page">
+
+    </div>
+    
+    <div class="poncon-about poncon-page">
+
+    </div>
     ```
