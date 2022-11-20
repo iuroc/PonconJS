@@ -3,8 +3,8 @@
  * https://apee.top
  */
 class Poncon {
-    private pages = {}
-    private pageNames: string[] // 页面列表
+    private pages: { [target: string]: any } = {}
+    private pageNames: string[] = [] // 页面列表
     /**
      * 切换页面显示
      * @param target 页面标识
