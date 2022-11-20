@@ -85,7 +85,7 @@ var Poncon = /** @class */ (function () {
         return strs.slice(2);
     };
     /**
-     * 获取页面标识, 支持自动矫正
+     * 获取当前页面标识, 支持自动矫正
      * @param hash 网址hash
      * @returns 页面标识
      */

@@ -84,11 +84,11 @@ class Poncon {
         return strs.slice(2)
     }
     /**
-     * 获取页面标识, 支持自动矫正
+     * 获取当前页面标识, 支持自动矫正
      * @param hash 网址hash
      * @returns 页面标识
      */
-    private getTarget(hash?: string): string {
+    getTarget(hash?: string): string {
         var strs: string[] = (hash || location.hash).split('/')
         var target: string = strs[1] || ''
         // target不合法或者不在白名单
