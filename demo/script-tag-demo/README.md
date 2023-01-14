@@ -2,7 +2,7 @@
 
 ## 使用步骤
 
-1. 下载 `/dist/poncon.min.js`
+1. 下载 [`/dist/poncon.min.js`](../../dist/poncon.min.js)
 2. 在网页中通过 `<script>` 引入
     ```html
     <script src="./dist/poncon.min.js"></script>
