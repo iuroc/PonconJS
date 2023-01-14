@@ -36,7 +36,7 @@
       ```
     - 使用 TypeScript
       ```ts
-      import Poncon from 'ponconjs';
+      import Poncon from 'ponconjs'
       const poncon = new Poncon()
       ```
 - 注册页面列表
