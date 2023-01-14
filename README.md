@@ -26,19 +26,19 @@
 - 注意以下代码需要在页面加载完成后执行，如 window.onload
 - 实例化一个 poncon 对象
     - 通过 npm 引入时
-    ```js
-    const ponconjs = require('ponconjs')
-    const poncon = new ponconjs.default()
-    ```
-    通过 <script> 引入时
-    ```js
-    const poncon = new Poncon()
-    ```
+      ```js
+      const ponconjs = require('ponconjs')
+      const poncon = new ponconjs.default()
+      ```
+    - 通过 <script> 引入时
+      ```js
+      const poncon = new Poncon()
+      ```
     - 使用 TypeScript
-    ```ts
-    import Poncon from 'ponconjs';
-    const poncon = new Poncon()
-    ```
+      ```ts
+      import Poncon from 'ponconjs';
+      const poncon = new Poncon()
+      ```
 - 注册页面列表
     ```js
     poncon.setPageList(['home', 'about'])
