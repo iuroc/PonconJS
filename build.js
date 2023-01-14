@@ -15,5 +15,9 @@ if (!fs.existsSync('dist')) {
     fs.mkdirSync('dist')
 }
 fs.writeFileSync('dist/poncon.js', newCodeStr)
+
+// Browserify 打包
+execSync('browserify dist/poncon.js -o dist/poncon.min.js')
+
 // UglifyJS 处理
-execSync('uglifyjs dist/poncon.js -m -c -o dist/poncon.min.js')
+execSync('uglifyjs dist/poncon.min.js -m -c -o dist/poncon.min.js')
