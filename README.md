@@ -15,9 +15,9 @@
 ## 使用方法
 
 - 引入 poncon.js
-  - 使用 <script> 标签引入
+  - 使用 `<script>` 标签引入
     ```html
-    <script src="poncon.min.js"></script>
+    <script src="./dist/poncon.min.js"></script>
     ```
   - 通过 npm 引入
     ```bash
