@@ -1,0 +1,21 @@
+{
+  "name": "ponconjs",
+  "version": "1.0.0",
+  "description": "前端路由控制系统",
+  "main": "poncon.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc && uglifyjs poncon.js -m -c -o poncon.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oyps/PonconJS.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/oyps/PonconJS/issues"
+  },
+  "homepage": "https://github.com/oyps/PonconJS#readme"
+}

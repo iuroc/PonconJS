@@ -107,3 +107,6 @@ class Poncon {
         return document.querySelector(`.poncon-${target}`)
     }
 }
+
+
+export default Poncon
