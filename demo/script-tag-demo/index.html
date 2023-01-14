@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>script 标签直接引入示例</title>
+        <style>
+            .page {
+                padding: 30px;
+                margin: 10px;
+                border: 1px solid #666666;
+                background-color: blanchedalmond;
+                border-radius: 15px;
+            }
+
+            .page h1 {
+                margin-top: 0px;
+                margin-bottom: 40px;
+                font-size: 40px;
+            }
+
+            .page a.active {
+                color: white;
+                background-color: dimgray;
+            }
+
+            .page a {
+                font-size: 30px;
+                padding: 10px 20px;
+                border-radius: 10px;
+                margin-right: 20px;
+                cursor: pointer;
+                background-color: cornsilk;
+                text-decoration: none;
+                color: black;
+            }
+        </style>
+</head>
+
+<body>
+    <h1>script 标签直接引入示例</h1>
+    <div class="poncon-home poncon-page" style="display: none;">
+        <div class="page">
+            <h1>这里是主页</h1>
+            <a href="#" class="active">#/home</a>
+            <a href="#/about">#/about</a>
+        </div>
+    </div>
+
+    <div class="poncon-about poncon-page" style="display: none;">
+        <div class="page">
+            <h1>这里是关于页</h1>
+            <a href="#">#/home</a>
+            <a href="#/about" class="active">#/about</a>
+        </div>
+    </div>
+    <script src="../../dist/poncon.min.js"></script>
+    <script>
+        const poncon = new Poncon()
+        poncon.setPageList(['home', 'about'])
+        poncon.start()
+    </script>
+</body>
+
+</html>

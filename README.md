@@ -24,13 +24,13 @@
     npm install ponconjs
     ```
 - 注意以下代码需要在页面加载完成后执行，如 window.onload
-- 实例化一个 poncon 对象
+- 实例化一个 `poncon` 对象
     - 通过 npm 引入时
       ```js
       const ponconjs = require('ponconjs')
       const poncon = new ponconjs.default()
       ```
-    - 通过 <script> 引入时
+    - 通过 `<script>` 引入时
       ```js
       const poncon = new Poncon()
       ```
@@ -57,15 +57,22 @@
     poncon.start()
     ```
 - HTML页面模板
+    加上 `style="display: none;"` 效果更好。
     ```html
-    <div class="poncon-home poncon-page">
+    <div class="poncon-home poncon-page" style="display: none;">
         <!-- Your code -->
     </div>
     
-    <div class="poncon-about poncon-page">
+    <div class="poncon-about poncon-page" style="display: none;">
         <!-- Your code -->
     </div>
     ```
+
+## Demo
+
+- [script 标签引入示例](demo/script-tag-demo/README.md)
+- [Browserify 示例](demo\browserify-demo\README.md)
+- [TypeScript + Browserify 示例](demo/ts-browserify-demo/README.md)
 
 ## 打包
 
