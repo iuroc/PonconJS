@@ -5,7 +5,7 @@
   "main": "poncon.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "tsc && uglifyjs poncon.js -m -c -o poncon.js"
+    "build": "tsc && uglifyjs poncon.js -m -c -o poncon.min.js"
   },
   "repository": {
     "type": "git",
