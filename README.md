@@ -22,25 +22,20 @@
   - 通过 npm 引入
     ```bash
     npm install ponconjs
+    ```
+    ```js
     import Poncon from "ponconjs"
     ```
-
 - 注意以下代码需要在页面加载完成后执行，如 window.onload
-
 - 实例化一个 poncon 对象
-
     ```js
     var poncon = new Poncon()
     ```
-
 - 注册页面列表
-
     ```js
     poncon.setPageList(['home', 'about'])
     ```
-
 - 设置页面事件
-
     ```js
     poncon.setPage('home', function (target, dom, args) {
         console.log(target, dom, args)
@@ -49,15 +44,11 @@
         console.log(target, dom, args)
     })
     ```
-
 - 启动路由系统（必须在最后执行）
-
     ```js
     poncon.start()
     ```
-
 - HTML页面模板
-  
     ```html
     <div class="poncon-home poncon-page">
         <!-- Your code -->
