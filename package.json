@@ -1,6 +1,6 @@
 {
     "name": "ponconjs",
-    "version": "1.0.0",
+    "version": "1.1.1",
     "description": "前端路由控制系统",
     "main": "src/poncon.js",
     "scripts": {
