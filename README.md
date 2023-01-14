@@ -15,9 +15,14 @@
 ## 使用方法
 
 - 引入 poncon.js
-  
+  - 使用 <script> 标签引入
     ```html
-    <script src="poncon.js"></script>
+    <script src="poncon.min.js"></script>
+    ```
+  - 通过 npm 引入
+    ```bash
+    npm install ponconjs
+    import Poncon from "ponconjs"
     ```
 
 - 注意以下代码需要在页面加载完成后执行，如 window.onload
