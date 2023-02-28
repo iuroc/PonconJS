@@ -41,12 +41,12 @@ class Poncon {
      * @param func 页面载入事件
      */
     setPage(target: string, func?: (
-        /** 页面标识 */
-        target?: string,
         /** 当前页面 DOM */
         dom?: HTMLElement,
         /** 当前页面参数 */
-        args?: string[]) => void) {
+        args?: string[],
+        /** 页面数据 */
+        data?: any) => void) {
         if (!target) {
             return
         }
@@ -72,7 +72,7 @@ class Poncon {
         var dom = this.getDom(target)
         var args: string[] = this.getArgs(hash)
         this.changeView(target)
-        this.pages[target].event(target, dom, args)
+        this.pages[target].event(dom, args, this.pages[target].data)
     }
     /**
      * 获取页面参数列表

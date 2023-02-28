@@ -33,7 +33,8 @@ var Poncon = /** @class */ (function () {
             var dom = document.querySelector(".poncon-".concat(target));
             _this_1.pages[target] = {
                 dom: dom,
-                event: (function () { })
+                event: (function () { }),
+                data: {}
             };
         });
         this.pageNames = pageNames;
@@ -47,11 +48,7 @@ var Poncon = /** @class */ (function () {
         if (!target) {
             return;
         }
-        var dom = document.querySelector(".poncon-".concat(target));
-        this.pages[target] = {
-            dom: dom,
-            event: func || (function () { })
-        };
+        this.pages[target]['event'] = func || (function () { });
     };
     /**
      * 开启路由系统
@@ -73,7 +70,7 @@ var Poncon = /** @class */ (function () {
         var dom = this.getDom(target);
         var args = this.getArgs(hash);
         this.changeView(target);
-        this.pages[target].event(target, dom, args);
+        this.pages[target].event(dom, args, this.pages[target].data);
     };
     /**
      * 获取页面参数列表
