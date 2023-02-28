@@ -39,7 +39,13 @@ class Poncon {
      * @param target 页面标识
      * @param func 页面载入事件
      */
-    setPage(target: string, func?: () => void) {
+    setPage(target: string, func?: (
+        /** 页面标识 */
+        target?: string,
+        /** 当前页面 DOM */
+        dom?: HTMLElement,
+        /** 当前页面参数 */
+        args?: string[]) => void) {
         if (!target) {
             return
         }
