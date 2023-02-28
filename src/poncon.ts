@@ -3,7 +3,7 @@
  * https://apee.top
  */
 class Poncon {
-    private pages: { [target: string]: any } = {}
+    pages: { [target: string]: any } = {}
     private pageNames: string[] = [] // 页面列表
     /**
      * 切换页面显示
@@ -28,7 +28,8 @@ class Poncon {
             var dom = document.querySelector(`.poncon-${target}`)
             this.pages[target] = {
                 dom: dom,
-                event: (() => { })
+                event: (() => { }),
+                data: {}
             }
         })
         this.pageNames = pageNames
@@ -49,11 +50,7 @@ class Poncon {
         if (!target) {
             return
         }
-        var dom = document.querySelector(`.poncon-${target}`)
-        this.pages[target] = {
-            dom: dom,
-            event: func || (() => { })
-        }
+        this.pages[target]['event'] = func || (() => { })
     }
     /**
      * 开启路由系统
